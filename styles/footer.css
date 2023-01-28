@@ -1,0 +1,16 @@
+footer {
+    background-color: #004B87;
+    color: #ffffff;
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 30px;
+}
+footer>i{
+    margin: 0 0 10px 10px;
+    
+}
+footer>h4{
+    margin-bottom: 10px;
+}

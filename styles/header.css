@@ -1,0 +1,138 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+header>img {
+    margin-left: 15px;
+}
+
+.logo {
+    height: auto;
+    width: 100px;
+}
+
+#toggle {
+    display: none;
+}
+
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+    height: 120px;
+    width: 100%;
+    margin: 0 40px 0;
+    padding-top: 66px;
+}
+
+.menu {
+    font-size: 1.2rem;
+}
+
+nav a {
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    color: #3772FF;
+
+}
+
+#home-page .homeLink,
+#funfact-page .factLink,
+#contact-page .contactLink {
+    background-color: #FFCD00;
+    border-radius: 20px;
+    padding: 4px 20px;
+    text-align: center;
+}
+
+@media screen and (max-width: 999px) {
+
+    header {
+        margin-bottom: 100px;
+    }
+
+    #toggle {
+        display: block;
+    }
+
+    .navigation .menu {
+        display: none;
+    }
+
+    input:checked~.navigation .menu {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        margin-top: 40px;
+    }
+
+    .menu a {
+        margin-bottom: 20px;
+    }
+
+    input[type=checkbox] {
+        position: absolute;
+        right: 0px;
+        margin-right: 6%;
+        margin-top: 25px;
+        height: 35px;
+        width: 40px;
+        opacity: 0;
+        z-index: 5;
+    }
+
+    .menubar-lines {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 35px;
+        width: 40px;
+        position: absolute;
+        right: 0px;
+        padding: 2px;
+        margin-right: 6%;
+        margin-top: 25px;
+        border-radius: 50%;
+        z-index: 2;
+    }
+
+    .menubar-lines .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        background-color: #004B87;
+        border-radius: 10px;
+    }
+
+    .menubar-lines .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.5s ease-out;
+
+    }
+
+    .menubar-lines .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.5s ease-out;
+    }
+
+    input:checked~.menubar-lines .line1 {
+        transform: rotate(45deg);
+        margin-top: 2px;
+
+    }
+
+    input:checked~.menubar-lines .line3 {
+        transform: rotate(-45deg);
+    }
+
+    input:checked~.menubar-lines .line2 {
+        display: none;
+
+    }
+}
